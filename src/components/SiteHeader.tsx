@@ -12,11 +12,12 @@ export default function SiteHeader() {
       <div className="flex w-full items-center px-6 py-4">
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/dcc-logo.png"
+            src="/dcc-logo-transparent.png"
             alt="Dunmurry Cricket Club crest"
             width={56}
             height={74}
             priority
+            unoptimized
             className="h-auto w-12"
           />
 
@@ -156,7 +157,7 @@ export default function SiteHeader() {
           aria-label="Toggle navigation menu"
           aria-expanded={mobileMenuOpen}
           onClick={() => setMobileMenuOpen((open) => !open)}
-          className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 text-white transition hover:border-dcc-gold hover:text-dcc-gold lg:hidden"
+          className="flex ml-auto h-11 w-11 items-center justify-center rounded-xl border border-white/10 text-white transition hover:border-dcc-gold hover:text-dcc-gold lg:hidden"
         >
           {mobileMenuOpen ? (
             <svg

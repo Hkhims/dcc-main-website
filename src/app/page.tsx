@@ -59,6 +59,26 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="border-t border-white/10 bg-[#080b12] px-6 py-16 sm:py-20">
+        <div className="w-full">
+          <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 sm:p-10 lg:p-12">
+            <p className="text-sm font-bold uppercase tracking-[0.3em] text-dcc-gold">
+              Season Update
+            </p>
+
+            <h2 className="mt-4 max-w-3xl text-3xl font-black uppercase tracking-tight sm:text-4xl lg:text-5xl">
+              2026 Season Complete
+            </h2>
+
+            <p className="mt-5 text-base leading-7 text-zinc-300 sm:text-lg">
+  Cricket may be finished for 2026, but there&apos;s always more to come at
+  DCC. Thank you to our players, supporters and everyone who made the season
+  possible.
+</p>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

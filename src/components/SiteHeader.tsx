@@ -9,7 +9,7 @@ export default function SiteHeader() {
 
   return (
     <header className="relative z-50 border-b border-white/10 bg-[#05070d]/95 backdrop-blur">
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4">
+      <div className="flex w-full items-center px-6 py-4">
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/dcc-logo.png"
@@ -30,7 +30,7 @@ export default function SiteHeader() {
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="ml-auto hidden items-center gap-8 lg:flex">
           <Link
             href="/"
             className="text-sm font-semibold uppercase tracking-[0.14em] text-white transition hover:text-dcc-gold"

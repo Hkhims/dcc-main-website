@@ -1,30 +1,62 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#05070d] text-white">
-      <section className="flex min-h-screen items-center justify-center px-6">
-        <div className="mx-auto flex w-full max-w-5xl flex-col items-center text-center">
-          <Image
-            src="/dcc-logo.png"
-            alt="Dunmurry Cricket Club crest"
-            width={240}
-            height={320}
-            priority
-            className="h-auto w-[180px] sm:w-[220px]"
-          />
+    <main className="bg-[#05070d] text-white">
+      <section className="relative isolate min-h-[calc(100vh-89px)] overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('/dcc-hero.jpg')",
+          }}
+          aria-hidden="true"
+        />
 
-          <p className="mt-8 text-sm font-semibold uppercase tracking-[0.35em] text-[#d4af37]">
-            Dunmurry Cricket Club
-          </p>
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/20"
+          aria-hidden="true"
+        />
 
-          <h1 className="mt-4 text-4xl font-black uppercase tracking-tight sm:text-6xl">
-            One Club. One Family. One DCC.
-          </h1>
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-[#05070d] via-transparent to-black/20"
+          aria-hidden="true"
+        />
 
-          <p className="mt-6 max-w-2xl text-base leading-7 text-zinc-300 sm:text-lg">
-            The new Dunmurry Cricket Club website is now in development.
-          </p>
+        <div className="relative flex min-h-[calc(100vh-89px)] w-full items-end px-6 pb-16 pt-24 sm:pb-20 lg:items-center lg:pb-0">
+          <div className="max-w-3xl">
+            <p className="text-sm font-bold uppercase tracking-[0.3em] text-dcc-gold">
+              Dunmurry Cricket Club
+            </p>
+
+            <h1 className="mt-5 text-5xl font-black uppercase leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
+              One Club.
+              <br />
+              One Family.
+              <br />
+              One DCC.
+            </h1>
+
+            <p className="mt-6 max-w-xl text-base leading-7 text-zinc-200 sm:text-lg">
+              Competitive cricket, strong community and opportunities for
+              players of varying abilities — all at the heart of Dunmurry.
+            </p>
+
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="/join-us"
+                className="inline-flex items-center justify-center rounded-full bg-dcc-gold px-6 py-3 text-sm font-bold uppercase tracking-[0.12em] text-black transition hover:brightness-110"
+              >
+                Join DCC
+              </Link>
+
+              <Link
+                href="/cricket/teams"
+                className="inline-flex items-center justify-center rounded-full border border-white/30 bg-black/20 px-6 py-3 text-sm font-bold uppercase tracking-[0.12em] text-white backdrop-blur transition hover:border-dcc-gold hover:text-dcc-gold"
+              >
+                Explore Our Teams
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </main>

@@ -1,9 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function SiteHeader() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
-    <header className="border-b border-white/10 bg-[#05070d]/95 backdrop-blur">
+    <header className="relative z-50 border-b border-white/10 bg-[#05070d]/95 backdrop-blur">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-3">
           <Image
@@ -145,7 +150,138 @@ export default function SiteHeader() {
             Performance Centre
           </a>
         </nav>
+
+        <button
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded={mobileMenuOpen}
+          onClick={() => setMobileMenuOpen((open) => !open)}
+          className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 text-white transition hover:border-dcc-gold hover:text-dcc-gold lg:hidden"
+        >
+          {mobileMenuOpen ? (
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+              className="h-6 w-6"
+            >
+              <path
+                d="M6 6L18 18M18 6L6 18"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
+          ) : (
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+              className="h-6 w-6"
+            >
+              <path
+                d="M4 7H20M4 12H20M4 17H20"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
+          )}
+        </button>
       </div>
+
+      {mobileMenuOpen && (
+        <div className="border-t border-white/10 bg-[#070a11] lg:hidden">
+          <nav className="mx-auto flex w-full max-w-7xl flex-col px-6 py-6">
+            <Link
+              href="/"
+              onClick={() => setMobileMenuOpen(false)}
+              className="border-b border-white/10 py-4 text-sm font-bold uppercase tracking-[0.14em] text-white"
+            >
+              Home
+            </Link>
+
+            <div className="border-b border-white/10 py-4">
+              <p className="text-sm font-bold uppercase tracking-[0.14em] text-dcc-gold">
+                Club
+              </p>
+
+              <div className="mt-3 flex flex-col gap-3 pl-4">
+                <Link
+                  href="/club/about"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-sm text-zinc-300"
+                >
+                  About DCC
+                </Link>
+
+                <Link
+                  href="/club/committee"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-sm text-zinc-300"
+                >
+                  Committee
+                </Link>
+
+                <Link
+                  href="/club/gallery"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-sm text-zinc-300"
+                >
+                  Gallery
+                </Link>
+
+                <Link
+                  href="/club/contact"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-sm text-zinc-300"
+                >
+                  Contact & Find Us
+                </Link>
+              </div>
+            </div>
+
+            <div className="border-b border-white/10 py-4">
+              <p className="text-sm font-bold uppercase tracking-[0.14em] text-dcc-gold">
+                Cricket
+              </p>
+
+              <div className="mt-3 flex flex-col gap-3 pl-4">
+                <Link
+                  href="/cricket/teams"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-sm text-zinc-300"
+                >
+                  Teams
+                </Link>
+
+                <Link
+                  href="/cricket/fixtures"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-sm text-zinc-300"
+                >
+                  Fixtures & Results
+                </Link>
+              </div>
+            </div>
+
+            <Link
+              href="/join-us"
+              onClick={() => setMobileMenuOpen(false)}
+              className="border-b border-white/10 py-4 text-sm font-bold uppercase tracking-[0.14em] text-white"
+            >
+              Join Us
+            </Link>
+
+            <a
+              href="https://dcc-performance-centre.vercel.app/"
+              className="mt-6 flex items-center justify-center rounded-xl border border-dcc-gold px-5 py-3 text-sm font-bold uppercase tracking-[0.12em] text-dcc-gold"
+            >
+              Performance Centre
+            </a>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }

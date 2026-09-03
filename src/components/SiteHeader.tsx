@@ -33,19 +33,103 @@ export default function SiteHeader() {
             Home
           </Link>
 
-          <Link
-            href="/club"
-            className="text-sm font-semibold uppercase tracking-[0.14em] text-white transition hover:text-dcc-gold"
-          >
-            Club
-          </Link>
+          <div className="group relative">
+            <button
+              type="button"
+              className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-white transition hover:text-dcc-gold"
+            >
+              Club
 
-          <Link
-            href="/cricket"
-            className="text-sm font-semibold uppercase tracking-[0.14em] text-white transition hover:text-dcc-gold"
-          >
-            Cricket
-          </Link>
+              <svg
+                viewBox="0 0 20 20"
+                fill="none"
+                aria-hidden="true"
+                className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180"
+              >
+                <path
+                  d="M5 7.5L10 12.5L15 7.5"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+
+            <div className="invisible absolute left-1/2 top-full z-50 w-64 -translate-x-1/2 pt-5 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100">
+              <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#0a0d14] p-2 shadow-2xl shadow-black/40">
+                <Link
+                  href="/club/about"
+                  className="block rounded-xl px-4 py-3 text-sm font-semibold text-white transition hover:bg-white/5 hover:text-dcc-gold"
+                >
+                  About DCC
+                </Link>
+
+                <Link
+                  href="/club/committee"
+                  className="block rounded-xl px-4 py-3 text-sm font-semibold text-white transition hover:bg-white/5 hover:text-dcc-gold"
+                >
+                  Committee
+                </Link>
+
+                <Link
+                  href="/club/gallery"
+                  className="block rounded-xl px-4 py-3 text-sm font-semibold text-white transition hover:bg-white/5 hover:text-dcc-gold"
+                >
+                  Gallery
+                </Link>
+
+                <Link
+                  href="/club/contact"
+                  className="block rounded-xl px-4 py-3 text-sm font-semibold text-white transition hover:bg-white/5 hover:text-dcc-gold"
+                >
+                  Contact & Find Us
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="group relative">
+            <button
+              type="button"
+              className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-white transition hover:text-dcc-gold"
+            >
+              Cricket
+
+              <svg
+                viewBox="0 0 20 20"
+                fill="none"
+                aria-hidden="true"
+                className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180"
+              >
+                <path
+                  d="M5 7.5L10 12.5L15 7.5"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+
+            <div className="invisible absolute left-1/2 top-full z-50 w-64 -translate-x-1/2 pt-5 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100">
+              <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#0a0d14] p-2 shadow-2xl shadow-black/40">
+                <Link
+                  href="/cricket/teams"
+                  className="block rounded-xl px-4 py-3 text-sm font-semibold text-white transition hover:bg-white/5 hover:text-dcc-gold"
+                >
+                  Teams
+                </Link>
+
+                <Link
+                  href="/cricket/fixtures"
+                  className="block rounded-xl px-4 py-3 text-sm font-semibold text-white transition hover:bg-white/5 hover:text-dcc-gold"
+                >
+                  Fixtures & Results
+                </Link>
+              </div>
+            </div>
+          </div>
 
           <Link
             href="/join-us"

@@ -45,31 +45,29 @@ export default function AboutPage() {
         </div>
 
         <div className="relative flex min-h-[62vh] items-end px-6 py-16 sm:py-20 lg:min-h-[68vh] lg:items-center">
-          <div className="mx-auto w-full max-w-7xl">
-            <div className="max-w-3xl">
-              <p className="text-sm font-bold uppercase tracking-[0.3em] text-dcc-gold">
-                The Club
-              </p>
+          <div className="max-w-3xl">
+            <p className="text-sm font-bold uppercase tracking-[0.3em] text-dcc-gold">
+              The Club
+            </p>
 
-              <h1 className="mt-5 text-5xl font-black uppercase leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
-                About
-                <br />
-                Dunmurry Cricket Club
-              </h1>
+            <h1 className="mt-5 text-5xl font-black uppercase leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
+              About
+              <br />
+              Dunmurry Cricket Club
+            </h1>
 
-              <p className="mt-6 max-w-2xl text-base leading-7 text-zinc-200 sm:text-lg">
-                A competitive and welcoming cricket club at the heart of
-                Dunmurry, bringing players together through cricket, community
-                and a shared love of the game.
-              </p>
-            </div>
+            <p className="mt-6 max-w-2xl text-base leading-7 text-zinc-200 sm:text-lg">
+              A competitive and welcoming cricket club at the heart of
+              Dunmurry, bringing players together through cricket, community
+              and a shared love of the game.
+            </p>
           </div>
         </div>
       </section>
 
       {/* Who We Are */}
       <section className="border-b border-white/10 bg-[#05070d] px-6 py-16 sm:py-20">
-        <div className="mx-auto grid w-full max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+        <div className="grid w-full gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.3em] text-dcc-gold">
               Who We Are
@@ -84,7 +82,7 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="space-y-6 text-base leading-8 text-zinc-300 sm:text-lg">
+          <div className="max-w-4xl space-y-6 text-base leading-8 text-zinc-300 sm:text-lg">
             <p>
               Dunmurry Cricket Club is a long-established cricket club based in
               Dunmurry, bringing together players from across the community to
@@ -108,7 +106,7 @@ export default function AboutPage() {
 
       {/* Six Teams */}
       <section className="border-b border-white/10 bg-[#080b12] px-6 py-16 sm:py-20">
-        <div className="mx-auto w-full max-w-7xl">
+        <div className="w-full">
           <p className="text-sm font-bold uppercase tracking-[0.3em] text-dcc-gold">
             One Club
           </p>
@@ -153,7 +151,7 @@ export default function AboutPage() {
 
       {/* Home Ground */}
       <section className="border-b border-white/10 bg-[#05070d] px-6 py-16 sm:py-20">
-        <div className="mx-auto grid w-full max-w-7xl gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
+        <div className="grid w-full gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
           <div className="relative min-h-[360px] overflow-hidden rounded-3xl border border-white/10 sm:min-h-[460px]">
             <Image
               src="/dcc-ground.jpg"
@@ -175,7 +173,7 @@ export default function AboutPage() {
               Our Club.
             </h2>
 
-            <p className="mt-6 text-base leading-7 text-zinc-300 sm:text-lg">
+            <p className="mt-6 max-w-3xl text-base leading-7 text-zinc-300 sm:text-lg">
               DCC&apos;s home in Dunmurry provides the setting for competitive
               cricket, training and the day-to-day life of the club.
             </p>
@@ -203,7 +201,7 @@ export default function AboutPage() {
 
       {/* Club Culture */}
       <section className="border-b border-white/10 bg-[#080b12] px-6 py-16 sm:py-20">
-        <div className="mx-auto w-full max-w-7xl">
+        <div className="w-full">
           <p className="text-sm font-bold uppercase tracking-[0.3em] text-dcc-gold">
             Club Culture
           </p>
@@ -259,7 +257,7 @@ export default function AboutPage() {
 
       {/* Join CTA */}
       <section className="bg-[#05070d] px-6 py-16 sm:py-20">
-        <div className="mx-auto w-full max-w-7xl">
+        <div className="w-full">
           <div className="relative overflow-hidden rounded-3xl border border-dcc-gold/20 bg-[#0a0f1c] p-8 sm:p-10 lg:p-12">
             <div
               className="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-dcc-gold/5 blur-3xl"
@@ -301,7 +299,7 @@ export default function AboutPage() {
 
       {/* Footer */}
       <footer className="border-t border-white/10 bg-[#03050a] px-6 py-10">
-        <div className="mx-auto w-full max-w-7xl">
+        <div className="w-full">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.22em] text-white">

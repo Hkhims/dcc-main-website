@@ -72,13 +72,6 @@ export default function SiteHeader() {
                 </Link>
 
                 <Link
-                  href="/club/committee"
-                  className="block rounded-xl px-4 py-3 text-sm font-semibold text-white transition hover:bg-white/5 hover:text-dcc-gold"
-                >
-                  Committee
-                </Link>
-
-                <Link
                   href="/club/gallery"
                   className="block rounded-xl px-4 py-3 text-sm font-semibold text-white transition hover:bg-white/5 hover:text-dcc-gold"
                 >
@@ -89,7 +82,7 @@ export default function SiteHeader() {
                   href="/club/contact"
                   className="block rounded-xl px-4 py-3 text-sm font-semibold text-white transition hover:bg-white/5 hover:text-dcc-gold"
                 >
-                  Contact & Find Us
+                  Contact
                 </Link>
               </div>
             </div>
@@ -157,7 +150,7 @@ export default function SiteHeader() {
           aria-label="Toggle navigation menu"
           aria-expanded={mobileMenuOpen}
           onClick={() => setMobileMenuOpen((open) => !open)}
-          className="flex ml-auto h-11 w-11 items-center justify-center rounded-xl border border-white/10 text-white transition hover:border-dcc-gold hover:text-dcc-gold lg:hidden"
+          className="ml-auto flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 text-white transition hover:border-dcc-gold hover:text-dcc-gold lg:hidden"
         >
           {mobileMenuOpen ? (
             <svg
@@ -217,14 +210,6 @@ export default function SiteHeader() {
                 </Link>
 
                 <Link
-                  href="/club/committee"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="text-sm text-zinc-300"
-                >
-                  Committee
-                </Link>
-
-                <Link
                   href="/club/gallery"
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-sm text-zinc-300"
@@ -237,7 +222,7 @@ export default function SiteHeader() {
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-sm text-zinc-300"
                 >
-                  Contact & Find Us
+                  Contact
                 </Link>
               </div>
             </div>

@@ -34,7 +34,7 @@ export default function AboutPage() {
           />
 
           <div
-            className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-black/30"
+            className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/40 to-black/20"
             aria-hidden="true"
           />
 

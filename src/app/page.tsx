@@ -1,38 +1,5 @@
 import Link from "next/link";
 
-const teams = [
-  {
-    name: "DCC 1",
-    label: "1ST XI",
-    href: "/cricket/teams/dcc-1",
-  },
-  {
-    name: "DCC 2",
-    label: "2ND XI",
-    href: "/cricket/teams/dcc-2",
-  },
-  {
-    name: "DCC 3",
-    label: "3RD XI",
-    href: "/cricket/teams/dcc-3",
-  },
-  {
-    name: "DCC 4",
-    label: "4TH XI",
-    href: "/cricket/teams/dcc-4",
-  },
-  {
-    name: "MIDWEEK 1",
-    label: "1ST XI",
-    href: "/cricket/teams/midweek-1",
-  },
-  {
-    name: "MIDWEEK 2",
-    label: "2ND XI",
-    href: "/cricket/teams/midweek-2",
-  },
-];
-
 export default function Home() {
   return (
     <main className="bg-[#05070d] text-white">
@@ -105,58 +72,15 @@ export default function Home() {
             </h2>
 
             <p className="mt-5 text-base leading-7 text-zinc-300 sm:text-lg">
-              The 2026 cricket season may be over, but there&apos;s always more to
-              come at DCC. Thank you to our players, supporters and everyone who
-              made the season possible.
+              The 2026 cricket season may be over, but there&apos;s always more
+              to come at DCC. Thank you to our players, supporters and everyone
+              who made the season possible.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="border-t border-white/10 bg-[#05070d] px-6 py-16 sm:py-20">
-        <div className="w-full">
-          <div className="mb-10">
-            <p className="text-sm font-bold uppercase tracking-[0.3em] text-dcc-gold">
-              Cricket at DCC
-            </p>
-
-            <h2 className="mt-4 text-3xl font-black uppercase tracking-tight sm:text-4xl lg:text-5xl">
-              Our Teams
-            </h2>
-          </div>
-
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {teams.map((team) => (
-              <Link
-                key={team.name}
-                href={team.href}
-                className="group flex min-h-44 flex-col justify-between rounded-3xl border border-white/10 bg-white/[0.03] p-8 transition duration-300 hover:-translate-y-1 hover:border-dcc-gold/60 hover:bg-white/[0.05]"
-              >
-                <div>
-                  <p className="text-sm font-bold uppercase tracking-[0.25em] text-dcc-gold">
-                    {team.label}
-                  </p>
-
-                  <h3 className="mt-3 text-3xl font-black uppercase tracking-tight text-white">
-                    {team.name}
-                  </h3>
-                </div>
-
-                <div className="mt-10 flex items-center gap-2 text-sm font-bold uppercase tracking-[0.14em] text-zinc-300 transition group-hover:text-dcc-gold">
-                  View Team
-                  <span
-                    aria-hidden="true"
-                    className="transition-transform duration-300 group-hover:translate-x-1"
-                  >
-                    →
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-            <section className="border-t border-white/10 bg-[#080b12] px-6 py-16 sm:py-20">
+      <section className="border-t border-white/10 bg-[#080b12] px-6 py-16 sm:py-20">
         <div className="relative overflow-hidden rounded-3xl border border-dcc-gold/20 bg-[#0a0f1c] p-8 sm:p-10 lg:p-12">
           <div
             className="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-dcc-gold/5 blur-3xl"
@@ -197,7 +121,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-            <section className="border-t border-white/10 bg-[#05070d] px-6 py-16 sm:py-20">
+
+      <section className="border-t border-white/10 bg-[#05070d] px-6 py-16 sm:py-20">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.3em] text-dcc-gold">
@@ -226,7 +151,8 @@ export default function Home() {
           </Link>
         </div>
       </section>
-            <section className="border-t border-white/10 bg-[#080b12] px-6 py-16 sm:py-20">
+
+      <section className="border-t border-white/10 bg-[#080b12] px-6 py-16 sm:py-20">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.3em] text-dcc-gold">
@@ -270,7 +196,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-            <footer className="border-t border-white/10 bg-[#03050a] px-6 py-10">
+
+      <footer className="border-t border-white/10 bg-[#03050a] px-6 py-10">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.22em] text-white">
